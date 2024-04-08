@@ -1,21 +1,28 @@
+import { Link } from 'react-router-dom'
 import millify from 'millify'
 
 import { useGetCryptosQuery } from '../../services/cryptoApi'
 
-import { Wrapper, InfosContainer, Infos } from './styles'
+import {
+  Wrapper,
+  InfosContainer,
+  Infos,
+  Title,
+  CryptoSection,
+  Button,
+  CryptoSectionContent
+} from './styles'
+import Cryptocurrencies from '../Cryptocurrencies'
 
 const HomeHero = () => {
   const { data, isFetching } = useGetCryptosQuery()
   const globalState = data?.data?.stats
 
-  console.log(data)
-  console.log(isFetching)
-
   if (isFetching) return <h3>Loading...</h3>
 
   return (
     <Wrapper>
-      <h1>Global Crypto Stats</h1>
+      <Title>Global Crypto Stats</Title>
       <InfosContainer>
         <Infos>
           <p>Total Cryptocurrencies</p>
@@ -38,6 +45,24 @@ const HomeHero = () => {
           <h3>{millify(globalState.totalMarkets)}</h3>
         </Infos>
       </InfosContainer>
+      <CryptoSection>
+        <CryptoSectionContent>
+          <Title>Top 10 Cryptocurrencies in the world</Title>
+          <Button>
+            <Link to="/cryptocurrencies">Show more</Link>
+          </Button>
+        </CryptoSectionContent>
+        <Cryptocurrencies />
+      </CryptoSection>
+      <CryptoSection>
+        <CryptoSectionContent>
+          <Title>Latest Crypto News</Title>
+          <Button>
+            <Link to="/news">Show more</Link>
+          </Button>
+        </CryptoSectionContent>
+        <p>news</p>
+      </CryptoSection>
     </Wrapper>
   )
 }

@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
   display: flex;
-  :last-child {
+  main {
     flex: 1;
   }
 `
