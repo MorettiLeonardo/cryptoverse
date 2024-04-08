@@ -12,7 +12,7 @@ import {
   Button,
   CryptoSectionContent
 } from './styles'
-import Cryptocurrencies from '../Cryptocurrencies'
+import Cryptocurrencies from '../ListCoins'
 
 const HomeHero = () => {
   const { data, isFetching } = useGetCryptosQuery()

@@ -3,12 +3,13 @@ import { colors } from '../../styles'
 
 export const Container = styled.div`
   width: 100%;
-  margin-top: 40px;
+  background-color: #eee;
+  padding: 24px;
 
   ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2px;
+    gap: 16px;
   }
 `
 
@@ -19,7 +20,7 @@ export const Card = styled.li`
   background-color: ${colors.white};
   height: 230px;
   cursor: pointer;
-  transition: 0.1s ease-in;
+  transition: 0.4s;
 
   img {
     max-width: 40px;
@@ -27,7 +28,9 @@ export const Card = styled.li`
   }
 
   &:hover {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow:
+      rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   }
 `
 

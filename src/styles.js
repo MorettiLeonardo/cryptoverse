@@ -21,7 +21,8 @@ const GlobalStyle = createGlobalStyle`
 
 export const Container = styled.div`
   display: flex;
-  main {
+  main,
+  section {
     flex: 1;
   }
 `

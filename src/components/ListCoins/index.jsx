@@ -5,7 +5,7 @@ import { useGetCryptosQuery } from '../../services/cryptoApi'
 
 import { Card, Container, CardHeader, CardBody, Border } from './styles'
 
-const Cryptocurrencies = () => {
+const ListCoins = () => {
   // eslint-disable-next-line no-unused-vars
   const { data: cryptoList, isFetching } = useGetCryptosQuery()
   // eslint-disable-next-line no-unused-vars
@@ -14,7 +14,7 @@ const Cryptocurrencies = () => {
   console.log(cryptos)
 
   return (
-    <div>
+    <section>
       <Container>
         <ul>
           {cryptos.map((coin) => (
@@ -41,8 +41,8 @@ const Cryptocurrencies = () => {
           ))}
         </ul>
       </Container>
-    </div>
+    </section>
   )
 }
 
-export default Cryptocurrencies
+export default ListCoins

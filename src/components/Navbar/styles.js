@@ -3,7 +3,7 @@ import { colors } from '../../styles'
 
 export const Sidebar = styled.aside`
   background-color: ${colors.blue};
-  height: 100vh;
+  min-height: 100%;
   max-width: 350px;
   width: 100%;
   padding: 24px;
@@ -26,5 +26,10 @@ export const List = styled.ul`
     align-items: center;
     gap: 8px;
     color: ${colors.gray};
+    transition: 0.4s;
+
+    &:hover {
+      color: ${colors.lightBlue};
+    }
   }
 `

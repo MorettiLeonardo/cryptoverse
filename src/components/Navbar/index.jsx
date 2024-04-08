@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import { IoMdHome } from 'react-icons/io'
 import { GoGraph } from 'react-icons/go'
 import { MdOutlineLightbulb } from 'react-icons/md'
@@ -7,18 +9,18 @@ import { Sidebar, List } from './styles'
 
 const Navbar = () => (
   <Sidebar>
-    <h1>Crytoverse</h1>
+    <h1>Cryptoverse</h1>
     <nav>
       <List>
         <li>
-          <a href="#">
+          <Link to="/">
             <IoMdHome /> Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#">
+          <Link to="/cryptocurrencies">
             <GoGraph /> Cryptocurrencies
-          </a>
+          </Link>
         </li>
         <li>
           <a href="#">
