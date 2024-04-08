@@ -17,6 +17,7 @@ export const Sidebar = styled.aside`
 export const List = styled.ul`
   margin-top: 32px;
   display: flex;
+  align-items: start;
   flex-direction: column;
   gap: 24px;
 

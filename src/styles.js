@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle, styled } from 'styled-components'
 
 export const colors = {
   blue: '#00142a',
@@ -16,6 +16,13 @@ const GlobalStyle = createGlobalStyle`
     font-family: sans-serif;
     list-style: none;
     text-decoration: none;
+  }
+`
+
+export const Container = styled.div`
+  display: flex;
+  :last-child {
+    flex: 1;
   }
 `
 

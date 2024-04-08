@@ -1,9 +1,14 @@
+import HomeHero from '../../components/HomeHero'
 import Navbar from '../../components/Navbar'
-import Footer from '../../components/Navbar/Footer'
+import Footer from '../../components/Footer'
+import { Container } from '../../styles'
 
 const Home = () => (
   <>
-    <Navbar />
+    <Container>
+      <Navbar />
+      <HomeHero />
+    </Container>
     <Footer />
   </>
 )
