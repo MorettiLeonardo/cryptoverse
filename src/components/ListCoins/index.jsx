@@ -39,9 +39,7 @@ const ListCoins = ({ simplified }) => {
   return (
     <section>
       <Container>
-        {simplified ? (
-          <></>
-        ) : (
+        {!simplified && (
           <InputSearch>
             <input
               type="text"
