@@ -14,12 +14,13 @@ import {
 } from './styles'
 import Cryptocurrencies from '../ListCoins'
 import NewsContent from '../NewsContent'
+import Loader from '../Loader'
 
 const HomeHero = () => {
   const { data, isFetching } = useGetCryptosQuery(10)
   const globalState = data?.data?.stats
 
-  if (isFetching) return <h3>Loading...</h3>
+  if (isFetching) return <Loader />
 
   return (
     <Wrapper>

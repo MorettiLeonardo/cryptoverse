@@ -70,11 +70,3 @@ export const InputSearch = styled.div`
     padding: 0 14px;
   }
 `
-
-export const Loading = styled.div`
-  height: 100vh;
-
-  h1 {
-    text-align: center;
-  }
-`

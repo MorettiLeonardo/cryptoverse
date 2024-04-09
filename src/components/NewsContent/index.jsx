@@ -1,14 +1,13 @@
 import React from 'react'
 import { useGetCryptosNewsQuery } from '../../services/cryptoNewsApi'
 import { Container, NewsCard } from './styles'
+import Loader from '../Loader'
 
 const NewsContent = ({ renderAll }) => {
   const { data: cryptoNews, isLoading } = useGetCryptosNewsQuery({
     lr: 'en-US',
     keyword: 'cryptocurrency'
   })
-
-  console.log(cryptoNews?.items)
 
   const getDescription = (description) => {
     if (description.length > 195) {
@@ -17,7 +16,7 @@ const NewsContent = ({ renderAll }) => {
     return description
   }
 
-  if (isLoading) return <div>Loading...</div>
+  if (isLoading) return <Loader />
 
   const itemsToRender = renderAll
     ? cryptoNews?.items

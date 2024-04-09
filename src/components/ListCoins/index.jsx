@@ -9,9 +9,9 @@ import {
   CardHeader,
   CardBody,
   Border,
-  InputSearch,
-  Loading
+  InputSearch
 } from './styles'
+import Loader from '../Loader'
 
 const ListCoins = ({ simplified }) => {
   const count = simplified ? 10 : 100
@@ -27,12 +27,7 @@ const ListCoins = ({ simplified }) => {
     setCryptos(filteredData)
   }, [cryptoList, searchTerm])
 
-  if (isFetching)
-    return (
-      <Loading>
-        <h1>Loading...</h1>
-      </Loading>
-    )
+  if (isFetching) return <Loader />
 
   return (
     <section>
