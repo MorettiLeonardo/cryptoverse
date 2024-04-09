@@ -5,6 +5,7 @@ export const Container = styled.div`
   width: 100%;
   background-color: #eee;
   padding: 24px;
+  min-height: 80vh;
 
   ul {
     display: grid;
@@ -56,4 +57,24 @@ export const CardBody = styled.div`
   flex-direction: column;
   line-height: 22px;
   gap: 12px;
+`
+
+export const InputSearch = styled.div`
+  text-align: center;
+
+  input {
+    border: none;
+    margin-bottom: 16px;
+    width: 365px;
+    height: 50px;
+    padding: 0 14px;
+  }
+`
+
+export const Loading = styled.div`
+  height: 100vh;
+
+  h1 {
+    text-align: center;
+  }
 `
