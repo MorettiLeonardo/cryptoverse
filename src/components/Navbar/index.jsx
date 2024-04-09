@@ -29,9 +29,9 @@ const Navbar = () => (
           </a>
         </li>
         <li>
-          <a href="#">
+          <Link to="/news">
             <MdOutlineLightbulb /> News
-          </a>
+          </Link>
         </li>
       </List>
     </nav>

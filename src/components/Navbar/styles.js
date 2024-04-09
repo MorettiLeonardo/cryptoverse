@@ -19,7 +19,7 @@ export const List = styled.ul`
   display: flex;
   align-items: start;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 
   a {
     display: flex;

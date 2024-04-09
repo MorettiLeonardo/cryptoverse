@@ -13,6 +13,7 @@ import {
   CryptoSectionContent
 } from './styles'
 import Cryptocurrencies from '../ListCoins'
+import NewsContent from '../NewsContent'
 
 const HomeHero = () => {
   const { data, isFetching } = useGetCryptosQuery(10)
@@ -61,7 +62,7 @@ const HomeHero = () => {
             <Link to="/news">Show more</Link>
           </Button>
         </CryptoSectionContent>
-        <p>news</p>
+        <NewsContent />
       </CryptoSection>
     </Wrapper>
   )
