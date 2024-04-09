@@ -5,6 +5,8 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 24px;
+  padding: 24px;
+  background-color: #eee;
 `
 
 export const NewsCard = styled.a`

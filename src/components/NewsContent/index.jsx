@@ -26,7 +26,7 @@ const NewsContent = ({ renderAll }) => {
   return (
     <Container>
       {itemsToRender?.map((item) => (
-        <NewsCard href={item.newsUrl} key={item.timestamp}>
+        <NewsCard href={item.newsUrl} key={item.timestamp} target="_blank">
           <img src={item.images.thumbnailProxied} alt="New" />
           <h2>{item.title}</h2>
           <p>{getDescription(item.snippet)}</p>
