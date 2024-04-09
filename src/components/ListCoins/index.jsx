@@ -5,19 +5,21 @@ import { useGetCryptosQuery } from '../../services/cryptoApi'
 
 import { Card, Container, CardHeader, CardBody, Border } from './styles'
 
-const ListCoins = () => {
-  // eslint-disable-next-line no-unused-vars
-  const { data: cryptoList, isFetching } = useGetCryptosQuery()
+const ListCoins = ({ simplified }) => {
+  const count = simplified ? 10 : 100
+  const { data: cryptoList, isFetching } = useGetCryptosQuery(count)
   // eslint-disable-next-line no-unused-vars
   const [cryptos, setCryptos] = useState(cryptoList?.data?.coins)
 
   console.log(cryptos)
 
+  if (isFetching) return <h1>Loading...</h1>
+
   return (
     <section>
       <Container>
         <ul>
-          {cryptos.map((coin) => (
+          {cryptos?.map((coin) => (
             <Card key={coin.id}>
               <CardHeader>
                 <p>

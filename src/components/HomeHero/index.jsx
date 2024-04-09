@@ -15,7 +15,7 @@ import {
 import Cryptocurrencies from '../ListCoins'
 
 const HomeHero = () => {
-  const { data, isFetching } = useGetCryptosQuery()
+  const { data, isFetching } = useGetCryptosQuery(10)
   const globalState = data?.data?.stats
 
   if (isFetching) return <h3>Loading...</h3>
@@ -52,7 +52,7 @@ const HomeHero = () => {
             <Link to="/cryptocurrencies">Show more</Link>
           </Button>
         </CryptoSectionContent>
-        <Cryptocurrencies />
+        <Cryptocurrencies simplified />
       </CryptoSection>
       <CryptoSection>
         <CryptoSectionContent>

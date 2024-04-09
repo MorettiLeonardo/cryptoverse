@@ -7,7 +7,7 @@ const Cryptocurrencies = () => (
   <>
     <Container>
       <Navbar />
-      <ListCoins />
+      <ListCoins simplified={false} />
     </Container>
     <Footer />
   </>
