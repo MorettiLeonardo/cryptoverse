@@ -5,11 +5,18 @@ import { GoGraph } from 'react-icons/go'
 import { MdOutlineLightbulb } from 'react-icons/md'
 import { TbNews } from 'react-icons/tb'
 
-import { Sidebar, List } from './styles'
+import logo from '../../assets/images/logo.png'
+
+import { Sidebar, List, Logo } from './styles'
 
 const Navbar = () => (
   <Sidebar>
-    <h1>Cryptoverse</h1>
+    <Link to="/">
+      <Logo>
+        <img src={logo} alt="Logo" />
+        <h1>Cryptoverse</h1>
+      </Logo>
+    </Link>
     <nav>
       <List>
         <li>

@@ -7,11 +7,6 @@ export const Sidebar = styled.aside`
   max-width: 350px;
   width: 100%;
   padding: 24px;
-
-  h1 {
-    color: ${colors.lightBlue};
-    text-align: center;
-  }
 `
 
 export const List = styled.ul`
@@ -32,4 +27,19 @@ export const List = styled.ul`
       color: ${colors.lightBlue};
     }
   }
+`
+
+export const Logo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  img {
+    border-radius: 50%;
+    max-width: 40px;
+  }
+
+  color: ${colors.lightBlue};
+  text-align: center;
 `
